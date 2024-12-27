@@ -12,7 +12,7 @@ const Navbar = () => (
   <nav className="navbar">
     <Link className='logo' to="/">RoadCamera</Link>
     <div className='links'>
-      <Link className='link' to="/dashboard">Dashboard</Link>
+      <Link className='link ' to="/dashboard">Dashboard</Link>
       <Link className='link' to="/about">About</Link>
       <div className='elips'></div>
     </div>
@@ -32,7 +32,7 @@ const Footer = () => (
     </div>
     <div className='right'>
       <p>&copy; 2024 RoadCamera. All Rights Reserved.</p>
-      <p>Created by: <a href="https://t.me/KOLEN_Z" target='blanck'>Kolen</a> & <a href="https://t.me/khudoberdi0410" target='blanck'>Khudoiberdi</a></p>
+      <p>Created by: <a  className='link_list_a' href="https://t.me/KOLEN_Z" target='blanck'>Kolen</a> & <a className='link_list_a' href="https://t.me/khudoberdi0410" target='blanck'>Khudoiberdi</a></p>
       <ul className='link_list'>
         <li><a href="https://t.me/KOLEN_Z" target='blanck'><FaTelegram className='link_list_a'/></a></li>
         <li><a href="https://github.com/MakhmudovM" target='blanck'><FaGithub className='link_list_a'/></a></li>
