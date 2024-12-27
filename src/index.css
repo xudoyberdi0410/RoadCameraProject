@@ -177,7 +177,10 @@ background-color: bisque;
 }
 
 .footer-nav .links .link:hover {
-  color: #333; /* Цвет при наведении - темный для контраста */
+  color: #0099ff; /* Цвет при наведении - темный для контраста */
+}
+.link:hover{
+  color: #0099ff;
 }
 
 .footer .right p {
@@ -200,7 +203,12 @@ ul{
   width: 22px;
   height: 22px;
 }
-
+.link_list_a:hover{
+  color: #0099ff;
+}
+.logo:hover{
+  color: #0099ff;
+}
 /* Общий контейнер */
 .about-section {
   display: flex;
@@ -439,29 +447,67 @@ ul{
   font-size: 28px;
 }
 
-/* Для портретной ориентации (стандартные телефоны) */
+/* Для портретной ориентации (телефоны) */
 @media screen and (max-width: 768px) {
   body {
-    font-size: 16px;
+    font-size: 14px;
+    padding: 10px;
   }
 
   .navbar, .footer {
     flex-direction: column;
-    padding: 1rem;
+    align-items: center;
+    text-align: center;
     width: 100%;
+    padding: 1rem;
   }
 
-  .camera_hero, .hero_img, .info_box, .second_info_box {
+  .logo {
+    font-size: 18px;
+  }
+
+  .links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .camera_hero, .hero_img, .info_box, .second_info_box, .map {
     width: 100%;
     height: auto;
+    margin: 10px 0;
   }
 
-  .camera-row {
+  .main_txt, .second_txt, .chart_info_txt {
+    font-size: 24px;
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  .article_txt, .second_article, .chart_info_p {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .camera-table, .short_box_list, .long_box_list {
     flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .camera-row, .short_box_item, .long_box_item {
+    flex-direction: column;
+    width: 100%;
     align-items: center;
+    text-align: center;
+    padding: 10px;
   }
 
   .details-button, .load-more-button {
+    width: 100%;
+    padding: 12px;
+  }
+
+  .dashboard, .chart_article {
     width: 100%;
     padding: 10px;
   }
@@ -477,12 +523,23 @@ ul{
     flex-direction: column;
     align-items: center;
     text-align: center;
+    padding: 1rem;
   }
 
   .info_box, .second_info_box, .map {
     width: 90%;
     margin: 20px auto;
     padding: 20px;
+  }
+
+  .camera_hero, .hero_img {
+    width: 100%;
+    height: auto;
+  }
+
+  .short_box_list, .long_box_list {
+    flex-direction: column;
+    gap: 10px;
   }
 
   .footer {
@@ -511,6 +568,12 @@ ul{
     margin: 20px auto;
   }
 
+  .chart_info, .short_box_item, .long_box_item {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+  }
+
   .footer {
     justify-content: space-between;
     padding: 10px 30px;
@@ -534,6 +597,14 @@ ul{
   .camera_hero, .hero_img {
     width: 100%;
     height: auto;
+  }
+
+  .camera-table {
+    gap: 10px;
+  }
+
+  .short_box_list, .long_box_list {
+    flex-direction: column;
   }
 
   .footer {
