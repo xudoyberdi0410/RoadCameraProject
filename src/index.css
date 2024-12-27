@@ -438,41 +438,96 @@ ul{
   font-size: 28px;
 }
 
-/* Медиазапросы для мобильных устройств */
+/* Для портретной ориентации (стандартные телефоны) */
 @media screen and (max-width: 768px) {
   body {
-    padding: 0;
-    margin: 0;
     font-size: 16px;
   }
 
-  .navbar {
+  .navbar, .footer {
     flex-direction: column;
-    align-items: flex-start;
     padding: 1rem;
+    width: 100%;
+  }
+
+  .camera_hero, .hero_img, .info_box, .second_info_box {
     width: 100%;
     height: auto;
   }
 
-  .logo {
-    font-size: 20px;
-    margin-bottom: 10px;
+  .camera-row {
+    flex-direction: column;
+    align-items: center;
   }
 
-  .links {
+  .details-button, .load-more-button {
+    width: 100%;
+    padding: 10px;
+  }
+}
+
+/* Для квадратных экранов (соотношение 1:1) */
+@media screen and (max-aspect-ratio: 1/1) {
+  body {
+    padding: 10px;
+  }
+
+  .navbar {
     flex-direction: column;
-    gap: 10px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .info_box, .second_info_box, .map {
+    width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+  }
+
+  .footer {
+    flex-direction: column;
+    text-align: center;
+    padding: 15px;
+  }
+}
+
+/* Для ультрашироких экранов (соотношение 21:9) */
+@media screen and (min-aspect-ratio: 21/9) {
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+
+  .camera_hero, .hero_img {
+    width: 80%;
+    height: auto;
+    margin: 20px auto;
+  }
+
+  .info_box, .second_info_box {
+    width: 70%;
+    margin: 20px auto;
+  }
+
+  .footer {
+    justify-content: space-between;
+    padding: 10px 30px;
+  }
+}
+
+/* Для планшетов (соотношение 4:3) */
+@media screen and (max-width: 1024px) and (min-aspect-ratio: 4/3) {
+  .navbar {
+    flex-direction: column;
+    padding: 1rem;
     width: 100%;
   }
 
-  .link {
-    font-size: 16px;
-    margin: 0;
-    text-align: left;
-  }
-
-  .elips {
-    margin-top: 10px;
+  .info_box, .second_info_box, .map {
+    width: 90%;
+    height: auto;
+    margin: 20px auto;
   }
 
   .camera_hero, .hero_img {
@@ -480,87 +535,9 @@ ul{
     height: auto;
   }
 
-  .info_box, .second_info_box {
-    width: 100%;
-    height: auto;
-    padding: 20px;
-    margin: 20px 0;
-  }
-
-  .main_txt, .second_txt {
-    font-size: 24px;
-    padding-left: 0;
-    text-align: center;
-  }
-
-  .article_txt, .second_article {
-    font-size: 16px;
-    padding: 10px;
-    text-align: justify;
-  }
-
   .footer {
     flex-direction: column;
-    padding: 1rem;
-    width: 100%;
-    height: auto;
     text-align: center;
-  }
-
-  .footer-nav {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .camera-table {
-    width: 100%;
-    gap: 10px;
-  }
-
-  .camera-row {
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-  }
-
-  .camera-cell {
-    font-size: 16px;
-  }
-
-  .details-button, .load-more-button {
-    width: 100%;
-    padding: 10px;
-  }
-
-  .about-section {
-    flex-direction: column;
-    text-align: center;
-    padding: 20px;
-  }
-
-  .top-left, .bottom-right {
-    text-align: center;
-    transform: translate(0, 0);
-    position: static;
-    width: 100%;
-  }
-
-  .top-right, .bottom-left {
-    width: 90%;
-    height: auto;
-    transform: translate(0, 0);
-    position: static;
-    margin: 10px auto;
-  }
-
-  .map {
-    width: 100%;
-    height: auto;
-    margin: 20px 0;
-  }
-
-  .dashboard {
-    width: 100%;
-    padding: 10px;
+    padding: 15px;
   }
 }
