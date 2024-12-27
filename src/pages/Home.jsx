@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <div className="page_home container">
       <div className='camera_hero'>
-        <img className='hero_img' src="./public\cemrecan-yurtman-6TKfYMCmUSk-unsplash (1).jpg" alt="radar photo" />
+        <img className='hero_img' src="./cemrecan-yurtman-6TKfYMCmUSk-unsplash (1).jpg" />
       </div>
 
       <div className='info_box'>
