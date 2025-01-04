@@ -15,3 +15,13 @@
     border-radius: 50%;
     background-color: #10C298;
 }
+
+select{
+    outline: none;
+    background-color: #10C298;
+    border: none;
+    border-radius: 10px;
+    color: aliceblue;
+    padding: 10px;
+    margin: 0 10px;
+}

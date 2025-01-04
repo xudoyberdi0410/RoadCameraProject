@@ -1,6 +1,11 @@
 import React from "react";
 
+import { useTranslation } from "react-i18next"
+
 const About = () => {
+  const { t } = useTranslation();
+
+
   return (
     <div className="about-section">
       {/* Верхний левый текст */}
@@ -13,6 +18,7 @@ const About = () => {
           and scrambled it to make a type specimen book. It has survived not
           only five centuries, but also the leap into electronic typesetting,
           remaining essentially unchanged.
+          {t("description")}
         </p>
       </div>
 
